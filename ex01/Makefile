@@ -3,7 +3,7 @@ CFLAGS = c++ -Wall -Werror -Wextra -std=c++98
 
 OBJ_DIR = objs/
 
-SRCS = main.cpp
+SRCS = main.cpp Contact.cpp PhoneBook.cpp
 OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.cpp=.o))
 
 all : $(NAME)
