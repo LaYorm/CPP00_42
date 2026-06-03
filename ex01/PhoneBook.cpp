@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 11:07:58 by yorimek           #+#    #+#             */
-/*   Updated: 2026/05/28 16:36:10 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/06/03 15:32:25 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	PhoneBook::add(void)
 		this->index++;
 }
 
-void	PhoneBook::search(void)
+void	PhoneBook::search(void) const
 {
 	std::string	com;
 
@@ -110,7 +110,7 @@ void	PhoneBook::search(void)
 	return ;
 }
 
-bool	PhoneBook::str_is_num(std::string str)
+bool	PhoneBook::str_is_num(std::string str) const
 {
 	int	i;
 
@@ -128,7 +128,7 @@ bool	PhoneBook::str_is_num(std::string str)
 	return (true);
 }
 
-bool	PhoneBook::str_is_space(std::string str)
+bool	PhoneBook::str_is_space(std::string str) const
 {
 	int	i;
 	int	has_non_space;
@@ -150,7 +150,7 @@ bool	PhoneBook::str_is_space(std::string str)
 	return (true);
 }
 
-void	PhoneBook::print_phonebook()
+void	PhoneBook::print_phonebook() const
 {
 	int	i;
 
@@ -172,7 +172,7 @@ void	PhoneBook::print_phonebook()
 	std::cout << "_____________________________________________" << std::endl;
 }
 
-std::string	PhoneBook::format_str(std::string str)
+std::string	PhoneBook::format_str(std::string str) const
 {
 	std::string	new_str;
 	std::string	space;
