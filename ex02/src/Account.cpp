@@ -6,11 +6,11 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 16:42:21 by yorimek           #+#    #+#             */
-/*   Updated: 2026/06/01 12:20:12 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/06/11 16:06:21 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Account.hpp"
+#include "../include/Account.hpp"
 #include "iostream"
 #include "ctime"
 
@@ -42,7 +42,7 @@ Account::~Account(void)
 		<< ";closed" << std::endl;
 }
 
-void	Account::displayAccountsInfos(void) const
+void	Account::displayAccountsInfos(void)
 {
 	Account::_displayTimestamp();
 	std::cout << " accounts:" << getNbAccounts() << ";total:"
@@ -111,22 +111,22 @@ void	Account::displayStatus(void) const
 	std::cout << ";withdrawals:" << this->_nbWithdrawals << std::endl;
 }
 
-int	Account::getNbAccounts(void) const
+int	Account::getNbAccounts(void)
 {
 	return (_nbAccounts);
 }
 
-int	Account::getTotalAmount(void) const
+int	Account::getTotalAmount(void)
 {
 	return (_totalAmount);
 }
 
-int	Account::getNbDeposits(void) const
+int	Account::getNbDeposits(void)
 {
 	return (_totalNbDeposits);
 }
 
-int	Account::getNbWithdrawals(void) const
+int	Account::getNbWithdrawals(void)
 {
 	return (_totalNbWithdrawals);
 }
