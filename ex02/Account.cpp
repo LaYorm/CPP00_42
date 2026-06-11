@@ -42,7 +42,7 @@ Account::~Account(void)
 		<< ";closed" << std::endl;
 }
 
-void	Account::displayAccountsInfos(void)
+void	Account::displayAccountsInfos(void) const
 {
 	Account::_displayTimestamp();
 	std::cout << " accounts:" << getNbAccounts() << ";total:"
@@ -111,22 +111,22 @@ void	Account::displayStatus(void) const
 	std::cout << ";withdrawals:" << this->_nbWithdrawals << std::endl;
 }
 
-int	Account::getNbAccounts(void)
+int	Account::getNbAccounts(void) const
 {
 	return (_nbAccounts);
 }
 
-int	Account::getTotalAmount(void)
+int	Account::getTotalAmount(void) const
 {
 	return (_totalAmount);
 }
 
-int	Account::getNbDeposits(void)
+int	Account::getNbDeposits(void) const
 {
 	return (_totalNbDeposits);
 }
 
-int	Account::getNbWithdrawals(void)
+int	Account::getNbWithdrawals(void) const
 {
 	return (_totalNbWithdrawals);
 }
